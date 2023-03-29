@@ -1,10 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import AppRouter from 'routes';
+import DefaultLayout from 'layouts/DefaultLayout';
 
 function App() {
-  return <AppRouter />;
+  return (
+    <DefaultLayout>
+      <AppRouter />
+    </DefaultLayout>
+  );
 }
 
 export default App;
