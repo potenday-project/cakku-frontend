@@ -5,6 +5,7 @@ const Container = Styled.div`
     display: flex;
     width: 100%;
     height: 100vh;
+    min-width: 390px;
     justify-content: center;
     align-items: center;
     background-color: green;
@@ -13,7 +14,6 @@ const ChildContainer = Styled.div`
     width: 768px;
     height: 100%;
     max-width: 768px;
-    min-width: 320px;
     background-color: #fff;
 `;
 
