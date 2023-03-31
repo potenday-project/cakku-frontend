@@ -1,7 +1,14 @@
 import React from 'react';
+import { getQuestions } from 'lib/questions';
 
 const QuestionPage = () => {
-  return <div>here is a question page!</div>;
+  const questions = getQuestions('joie', 'birthday party!');
+  return (
+    <>
+      <div>{questions[0].questionText}</div>
+      <div>{questions[0].answerType}</div>
+    </>
+  );
 };
 
 export default QuestionPage;
