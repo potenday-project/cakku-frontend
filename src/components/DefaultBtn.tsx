@@ -1,28 +1,28 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const BtnContainer = Styled.button`
-    width: 100%;
-    height: 100%;
-    border: 1px solid;
-    border-radius: 40px;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #fff;
+const BtnContainer = styled.button`
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
 `;
-const DisabledBtn = Styled.button`
-    width: 100%;
-    height: 100%;
-    background: #655D60;
-    border: 1px solid #655D60;
-    border-radius: 40px;
+const DisabledBtn = styled.button`
+  width: 100%;
+  height: 100%;
+  background: #655d60;
+  border: 1px solid #655d60;
+  border-radius: 40px;
 `;
-const ClearBtn = Styled.button`
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border: 1px solid #655D60;
-    border-radius: 40px;
+const ClearBtn = styled.button`
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #655d60;
+  border-radius: 40px;
 `;
 
 interface Props {

@@ -1,15 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 import DefaultBtn from 'components/DefaultBtn';
 
-const Container = Styled.div`
+const Container = styled.div`
   width: 100%;
   height: 100%;
   /* background-color: red; */
 `;
-const HeaderContainer = Styled.section`
+const HeaderContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -21,21 +21,21 @@ const HeaderContainer = Styled.section`
     height: 40vh;
   }
 `;
-const HeaderLogoImg = Styled.img`
+const HeaderLogoImg = styled.img`
   width: 100px;
   height: 100px;
   background-color: pink;
 `;
-const HeaderTitle = Styled.h1`
+const HeaderTitle = styled.h1`
   margin-top: 0;
   font-size: 2.25rem;
   font-weight: 700;
 `;
-const HeaderSubTitle = Styled.h2`
+const HeaderSubTitle = styled.h2`
   font-size: 1rem;
   font-weight: 600;
 `;
-const MainContainer = Styled.section`
+const MainContainer = styled.section`
   height: 360px;
   /* background-color: blue; */
 
@@ -43,7 +43,7 @@ const MainContainer = Styled.section`
     height: 30vh;
   }
 `;
-const MainContents = Styled.ul`
+const MainContents = styled.ul`
   display: flex;
   height: 100%;
   justify-content: space-between;
@@ -52,7 +52,7 @@ const MainContents = Styled.ul`
   list-style: none;
   /* background-color: red; */
 `;
-const MainContentItem = Styled.li`
+const MainContentItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,15 +62,15 @@ const MainContentItem = Styled.li`
   margin: 1%;
   /* background-color: pink; */
 `;
-const ContentItemImg = Styled.img`
+const ContentItemImg = styled.img`
   width: 100px;
   height: 100px;
   background-color: pink;
 `;
-const ContentItemText = Styled.p`
+const ContentItemText = styled.p`
   font-size: 1rem;
 `;
-const FooterContainer = Styled.section`
+const FooterContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -82,7 +82,7 @@ const FooterContainer = Styled.section`
     height: 30vh;
   }
 `;
-const BtnContainer = Styled.div`
+const BtnContainer = styled.div`
   width: 70%;
   height: 30%;
   min-width: 230px;

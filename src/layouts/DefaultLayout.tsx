@@ -1,20 +1,20 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const Container = Styled.div`
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    min-width: 390px;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-width: 390px;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
 `;
-const ChildContainer = Styled.div`
-    width: 768px;
-    height: 100%;
-    max-width: 768px;
-    background-color: #fff;
+const ChildContainer = styled.div`
+  width: 768px;
+  height: 100%;
+  max-width: 768px;
+  background-color: #fff;
 `;
 
 interface Props {
