@@ -5,10 +5,10 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
-  min-width: 390px;
+  min-width: 280px;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  background-color: #d9d9d9;
 `;
 const ChildContainer = styled.div`
   width: 768px;

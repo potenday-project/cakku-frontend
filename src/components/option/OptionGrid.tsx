@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const LinkBtn = () => {};
+const OptionGrid = () => {};
 
-export default LinkBtn;
+export default OptionGrid;

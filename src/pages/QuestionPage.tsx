@@ -3,6 +3,8 @@ import getQuestion from 'lib/questions';
 import { getInvitationTypes, getInvitationDetailTypes } from 'lib/options';
 import { useNavigate } from 'react-router';
 
+import NextBtn from 'components/button/NextBtn';
+
 const QuestionPage = () => {
   // question
   const [idx, setIdx] = useState<number>(1); // 현재 단계
@@ -126,6 +128,15 @@ const QuestionPage = () => {
           }}
         />
       )}
+      {question.optionType === 'input-time' && (
+        <input
+          type="time"
+          value={curValue as string}
+          onChange={e => {
+            setCurValue(e.target.value);
+          }}
+        />
+      )}
       {question.optionType === 'select-list' && (
         <ul>
           {options.map((option, index) => (
@@ -155,24 +166,18 @@ const QuestionPage = () => {
         </ul>
       )}
       {idx < 9 ? (
-        <button
-          onClick={() => {
-            moveNextIdx();
-          }}
-        >
-          next
-        </button>
+        <NextBtn text="다음" onClick={moveNextIdx} />
       ) : (
-        <button onClick={onSubmit}>done</button>
+        <NextBtn text="완료" onClick={onSubmit} />
       )}
       {idx > 5 && idx < 9 && (
-        <button
+        <NextBtn
+          btnType="none-border"
+          text="건너뛰기"
           onClick={() => {
             setIdx(prev => prev + 1);
           }}
-        >
-          skip
-        </button>
+        />
       )}
     </>
   );

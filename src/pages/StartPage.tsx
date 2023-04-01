@@ -2,94 +2,63 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import DefaultBtn from 'components/DefaultBtn';
+import NextBtn from 'components/button/NextBtn';
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
-  /* background-color: red; */
 `;
-const HeaderContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 500px;
-  /* background-color: yellow; */
+const HeaderText = styled.p`
+  margin: 10% 7%;
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 
-  @media (max-width: 768px) {
-    height: 40vh;
+  @media (max-width: 820px) {
+    margin-top: 15%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  @media (max-height: 600px) {
+    margin: 5% 7%;
   }
 `;
-const HeaderLogoImg = styled.img`
-  width: 100px;
-  height: 100px;
-  background-color: pink;
-`;
-const HeaderTitle = styled.h1`
-  margin-top: 0;
-  font-size: 2.25rem;
-  font-weight: 700;
-`;
-const HeaderSubTitle = styled.h2`
-  font-size: 1rem;
-  font-weight: 600;
-`;
-const MainContainer = styled.section`
-  height: 360px;
-  /* background-color: blue; */
+const MainText = styled.h1`
+  /* margin-left: 7%; */
 
-  @media (max-width: 768px) {
-    height: 30vh;
-  }
-`;
-const MainContents = styled.ul`
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1% 3%;
-  list-style: none;
-  /* background-color: red; */
-`;
-const MainContentItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 80%;
-  margin: 1%;
-  /* background-color: pink; */
-`;
-const ContentItemImg = styled.img`
-  width: 100px;
-  height: 100px;
-  background-color: pink;
-`;
-const ContentItemText = styled.p`
-  font-size: 1rem;
-`;
-const FooterContainer = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 360px;
-  margin-top: 10%;
-  /* background-color: gray; */
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.5rem;
 
-  @media (max-width: 768px) {
-    height: 30vh;
+  @media (min-width: 769px) and (min-height: 601px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 4rem;
   }
 `;
 const BtnContainer = styled.div`
-  width: 70%;
-  height: 30%;
-  min-width: 230px;
-  max-width: 400px;
-  min-height: 50px;
-  max-height: 80px;
-  /* background-color: pink; */
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  min-width: 250px;
+  max-width: 500px;
+  height: 5%;
+  min-height: 56px;
+  max-height: 76px;
+
+  @media (max-height: 800px) {
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const StartPage = () => {
@@ -101,44 +70,27 @@ const StartPage = () => {
 
   return (
     <Container>
-      <HeaderContainer>
-        <HeaderLogoImg />
-        <HeaderSubTitle>나만의 카드 만들기</HeaderSubTitle>
-        <HeaderTitle>CaKku 💌</HeaderTitle>
-      </HeaderContainer>
-      <MainContainer>
-        <MainContents>
-          <MainContentItem>
-            <ContentItemImg />
-            <ContentItemText>
-              질문은 8개
-              <br />
-              1분이면 OK!
-            </ContentItemText>
-          </MainContentItem>
-          <MainContentItem>
-            <ContentItemImg />
-            <ContentItemText>
-              몇 가지 정보면
-              <br />
-              나만의 카드 완성
-            </ContentItemText>
-          </MainContentItem>
-          <MainContentItem>
-            <ContentItemImg />
-            <ContentItemText>
-              친구에게
-              <br />
-              공유도 손쉽게!
-            </ContentItemText>
-          </MainContentItem>
-        </MainContents>
-      </MainContainer>
-      <FooterContainer>
-        <BtnContainer>
-          <DefaultBtn style="active" text="시작하기" onClick={onClickStart} />
-        </BtnContainer>
-      </FooterContainer>
+      <HeaderText>
+        카드를 손쉽게 만들고
+        <br />
+        행복한 순간을 함께 하고 싶은
+        <br />
+        소중한 사람에게 공유해 보세요
+      </HeaderText>
+      <MainText>
+        Happiness
+        <br />
+        Only
+        <br />
+        Real
+        <br />
+        When
+        <br />
+        Shared
+      </MainText>
+      <BtnContainer>
+        <NextBtn text="시작하기" onClick={onClickStart} />
+      </BtnContainer>
     </Container>
   );
 };
